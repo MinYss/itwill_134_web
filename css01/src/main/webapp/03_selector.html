@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS</title>
+<style>
+    section { /* 모든 div 태그 요소*/
+        border: 1px solid gray;
+        margin :16px;
+    }
+    
+    /* child selector : 아이디가 sec1인 요소의 자식들 중 p 태그 요소들 */
+    #sec1 > p {
+        color : #FF0000; /* red */
+    }
+    
+    /* descendant selector : 아이디가 sec2인 요소의 모든 p 태그 요소들 */
+    #sec2 p {
+        color : #0000FF; /* blue */
+    }
+    
+    /* 주의: 여러 개의 요소들을 함께 선택할 때 쉼표(,)를 사용 */
+    /* 아이디가 sec3인 요소와 태그 이름이 p인 요소들 전부 찾은 것 */
+    #sec3, p {
+        border : 2px dotted green;
+    }    
+
+</style>
+
+
+</head>
+<body>
+
+    <h1>CSS selector 2</h1>
+    <!-- 
+        자식(child), wkths(descendant) 요소 찾기:
+        - child element: HTML 계층 구조에서 "바로" 아래에 있는 요소.
+        - descendant element: HTML 계층 구조에서 어래에 있는 "모든" 요소.
+    
+        - child selector: 부모(조상)요소 > 자식요소
+        - descendant selector : 조상요소 자식요소                   ---(공백이 넣어있으면 그 밑의 모든 값들을)
+    
+     -->
+     
+     <section id="sec1">
+        <p>Section 1, Paragraph 1</p>
+        <p>Section 1, Paragraph 2</p>
+        <article>
+            <p>Section &gt; Article &gt; Paragraph</p>              <!--(&gt = greater than 의 줄임말이다)-->
+        </article>
+     </section>
+     
+     <section id="sec2">
+        <div>Section &gt; Division</div>                             <!-- (p 만을 바꿔준다는 조건이기 때문에 div는 색이 바뀌지 않는다.) -->
+        <p>Section 2, Paragraph 1</p> 
+        <p>Section 2, Paragraph 2</p>
+        <article>
+            <p>Section &gt; Article &gt; Paragraph</p>      
+        </article>
+     </section>
+     
+     
+     <section id="sec3">
+        <p>Section 3, Paragraph 1</p>
+        <p>Section 3, Paragraph 2</p>
+        <article>
+            <p>Section &gt; Article &gt; Paragraph</p>          
+        </article>
+     </section>
+     
+</body>
+</html>

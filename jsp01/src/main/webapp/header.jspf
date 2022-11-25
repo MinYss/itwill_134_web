@@ -1,0 +1,5 @@
+<%-- 확장자 jspf: JSP Fragment(조각). 다른 JSP의 포함될 파일 --%>
+<header class="header">
+Home Page
+</header>
+

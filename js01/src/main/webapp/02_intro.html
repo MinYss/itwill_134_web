@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript</title>
+
+<style>
+    div {
+        border: 1px solid gray;
+        padding: 2em;   /* em 반응형 만들때 자주 사용 2배 이런 느낌*/
+        margin: 16px;;
+        
+    }
+
+</style>
+
+
+</head>
+<body>
+
+    <h1>JavaScript 소개</h1>
+
+    <h2>HTML element의 컨텐트 변경</h2>
+    <div id="box1" onclick="changeContent()"> 여기는 <span>box1</span>입니다.</div>
+    <!--  onclick 속성: element를 클릭했을 때 동작을 설정. 여기서는 changeContent 함수를 호출. -->
+
+    <h2>HTML element의 속성(attribute) 또는 style 속성의 여러가지 특성(property) 변경</h2>
+    <div id="box2" onclick="changeStyle()"> 여기는 box2입니다.</div>
+    
+    <script>
+    function changeContent() {
+    	let box1 = document.getElementById('box1');
+    	box1.innerHTML ='안녕하세요, <strong>JavaScript</strong>!';     
+    }
+    
+/* 문제 */
+
+    let toggle = true;	
+    
+    function changeStyle() {
+    	let box2 = document.getElementById('box2');
+    	if(toggle) {
+    	box2.style.backgroundColor= 'crimson';
+    	box2.style.color = 'white';
+    	box2.style.fontSize = '200%';
+    	toggle = false;
+    	} else {
+    	box2.style.backgroundColor= 'white';
+        box2.style.color = 'black';
+        box2.style.fontSize = '100%';
+        toggle = true;
+    	}
+    }
+    </script>
+    
+    
+    
+    
+
+</body>
+</html>
