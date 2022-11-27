@@ -78,7 +78,7 @@ public class PostController {
         
         
     }
-    
+
     @GetMapping("/search")
     public String search(String type, String keyword, Model model) {
         log.info("search(type={}), keyword={})", type, keyword);
